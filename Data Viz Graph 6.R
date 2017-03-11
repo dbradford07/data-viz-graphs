@@ -92,3 +92,4 @@ color_final <- results$color[m]
 
 # MAPS
 map("county", "california", fill=TRUE, col=color_final, border=NA, resolution=0)
+title("California County Election Results, 2016")
