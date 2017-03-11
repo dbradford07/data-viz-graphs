@@ -10,6 +10,7 @@ blue_red_2 <- c("#67040e", "#770510", "#880512", "#980614", "#a80716", "#b90718"
                 
                 "#dce3fb", "#cdd7fa", "#becaf8", "#afbef6", "#9fb2f5", "#90a5f3", "#8199f1", "#718df0", "#6280ee", "#5374ec", "#4368ea", "#345be9", "#254fe7", "#1944e2", "#1740d3", "#153bc4", "#1437b4", "#1232a5", "#102d96", "#0f2986", "#0d2477", "#0b1f68")
 
+
 # Red
 #67040e
 #880512 =< -50
@@ -41,7 +42,8 @@ blue_red_2 <- c("#67040e", "#770510", "#880512", "#980614", "#a80716", "#b90718"
 #050d2b => 65 & < 70
 #01040c => 70
 
-# Make scale - this one has four categories
+
+# Make scale
 results$color <- NA
 
 results$color[which(results$X2016_dem_margin <= -.50)] <- "#880512"
@@ -73,6 +75,58 @@ results$color[which(results$X2016_dem_margin >= .65 & results$X2016_dem_margin <
 results$color[which(results$X2016_dem_margin >= .70)] <- "#01040c"
 
 
+
+
+# Red2
+#a80716 =< -48
+#c9081a =< -42 & > -48
+#ea091f =< -36 & > -42
+#f61f33 =< -30 & > -36
+#f73f51 =< -24 & > -30
+#f9606f =< -18 & > -24
+#fa818c =< -12 & > -18
+#fba1aa =< -6 & > -12
+#fdc2c8 < 0 & > -6
+
+# Blue2
+#cdd7fa => 0 & < 6
+#afbef6 => 6 & < 12
+#90a5f3 => 12 & < 18
+#718df0 => 18 & < 24
+#5374ec => 24 & < 30
+#345be9 => 30 & < 36
+#1944e2 => 36 & < 42
+#153bc4 => 42 & < 48
+#1232a5 => 48 & < 54
+#0f2986 => 54 & < 60
+#0b1f68 => 60 & < 66
+#081649 => 66 & < 72
+#050d2b => 72
+
+
+results$color[which(results$X2016_dem_margin <= -.48)] <- "#a80716"
+results$color[which(results$X2016_dem_margin <= -.42 & results$X2016_dem_margin > -.48)] <- "#c9081a"
+results$color[which(results$X2016_dem_margin <= -.36 & results$X2016_dem_margin > -.42)] <- "#ea091f"
+results$color[which(results$X2016_dem_margin <= -.30 & results$X2016_dem_margin > -.36)] <- "#f61f33"
+results$color[which(results$X2016_dem_margin <= -.24 & results$X2016_dem_margin > -.30)] <- "#f73f51"
+results$color[which(results$X2016_dem_margin <= -.18 & results$X2016_dem_margin > -.24)] <- "#f9606f"
+results$color[which(results$X2016_dem_margin <= -.12 & results$X2016_dem_margin > -.18)] <- "#fa818c"
+results$color[which(results$X2016_dem_margin <= -.06 & results$X2016_dem_margin > -.12)] <- "#fba1aa"
+results$color[which(results$X2016_dem_margin < 0 & results$X2016_dem_margin > -.06)] <- "#fdc2c8"
+
+results$color[which(results$X2016_dem_margin > 0 & results$X2016_dem_margin < .06)] <- "#cdd7fa"
+results$color[which(results$X2016_dem_margin >= .06 & results$X2016_dem_margin < .12)] <- "#afbef6"
+results$color[which(results$X2016_dem_margin >= .12 & results$X2016_dem_margin < .18)] <- "#90a5f3"
+results$color[which(results$X2016_dem_margin >= .18 & results$X2016_dem_margin < .24)] <- "#718df0"
+results$color[which(results$X2016_dem_margin >= .24 & results$X2016_dem_margin < .30)] <- "#5374ec"
+results$color[which(results$X2016_dem_margin >= .30 & results$X2016_dem_margin < .36)] <- "#345be9"
+results$color[which(results$X2016_dem_margin >= .36 & results$X2016_dem_margin < .42)] <- "#1944e2"
+results$color[which(results$X2016_dem_margin >= .42 & results$X2016_dem_margin < .48)] <- "#153bc4"
+results$color[which(results$X2016_dem_margin >= .48 & results$X2016_dem_margin < .54)] <- "#1232a5"
+results$color[which(results$X2016_dem_margin >= .54 & results$X2016_dem_margin < .60)] <- "#0f2986"
+results$color[which(results$X2016_dem_margin >= .60 & results$X2016_dem_margin < .66)] <- "#0b1f68"
+results$color[which(results$X2016_dem_margin >= .66 & results$X2016_dem_margin < .72)] <- "#081649"
+results$color[which(results$X2016_dem_margin >= .72)] <- "#050d2b"
 
 
 # Look at the names of the geographic areas
